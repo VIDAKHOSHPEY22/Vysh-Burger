@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00; /* Yellow color suitable for fast food */
+            direction: ltr; /* For left-to-right text */
+            margin: 0;
+            padding: 0;
+        }
+        .cart {
+            text-align: center;
+            padding: 20px;
+        }
+        .cart h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+        .cart-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        .cart-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+        .cart-item p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .cart-item button {
+            background-color: #C70039; /* Red color suitable for fast food */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cart-item button:hover {
+            background-color: #900C3F;
+        }
+        .checkout-button {
+            background-color: #28a745; /* Green color for checkout button */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cart">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <button class="checkout-button" onclick="window.location.href='signup.html'">Checkout</button>
+</div>
+
+<script>
+    function loadCart() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        for (var i = 0; i < cart.length; i++) {
+            var item = cart[i];
+            var cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = '<img src="' + item.image + '" alt="' + item.name + '">' +
+                                 '<h3>' + item.name + '</h3>' +
+                                 '<p>Price: ' + item.price + ' Toman</p>' +
+                                 '<button onclick="removeFromCart(' + i + ')">Remove from Cart</button>';
+            cartItems.appendChild(cartItem);
+        }
+    }
+
+    function removeFromCart(index) {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+    }
+
+    window.onload = loadCart;
+</script>
+
+</body>
+</html>

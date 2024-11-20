@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFCC00; /* رنگ زرد مناسب فست فود */
+}
+
+.homePage {
+    width: 100%;
+    height: 100vh;
+    background-color: #FF5733; /* رنگ نارنجی مناسب فست فود */
+    padding: 20px;
+}
+
+.navbar {
+    padding: 25px 60px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 350px;
+    background-color: #be1212; /* رنگ قرمز مناسب فست فود */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.left h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff705;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+ul li {
+    list-style-type: none;
+    color: #ff0909;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+ul li a {
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.text {
+    place-items: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #be1212; /* رنگ قرمز مناسب فست فود */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.heder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #f0fc02;
+}
+
+.exe {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: #FBFADA;
+}
+
+.paragrif {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff202;
+}
+
+.picture {
+    width: 550px;
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./img/remove-removebg-preview.png);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-in-out;
+}
+
+.allimg {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 70px;
+}
+
+.press {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.press:hover {
+    transform: scale(1.1);
+}
+
+#open {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#open img {
+    width: 29px;
+    height: 25px;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    opacity: 0px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .homePage {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 340px;
+    }
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+    .navbar {
+        display: inline-block;
+        width: 300px;
+    }
+
+    #navbarList {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        width: 200px;
+        height: 600px;
+        left: 160px;
+    }
+
+    .banner {
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .picture {
+        width: 360px;
+        height: 360px;
+        background-size: cover;
+    }
+
+    .text h3 {
+        font-size: 28px;
+    }
+
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .text {
+        margin-top: 10px;
+    }
+
+    .allimg {
+        position: absolute;
+        top: 500px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image {
+        width: 60px;
+        height: 60px;
+    }
+
+    #open {
+        display: block;
+    }
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 120px;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #8B0000; /* رنگ نوشابه */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; /* رنگ متن */
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-size: 1em;
+    color: #555;
+}
+
+.submit-review {
+    margin-top: 30px;
+}
+
+.submit-review h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff; /* رنگ متن */
+}
+
+.submit-review form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-review textarea,
+.submit-review input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-review button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-review button:hover {
+    background-color: #ff4500;
+}

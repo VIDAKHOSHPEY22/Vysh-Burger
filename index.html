@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./changes/remove3.png" type="image/x-icon" class="logo">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vysh-Burger.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="homePage">
+
+        <div class="navbar">
+            <div class="left">
+                <h1>Vysh 🍔</h1>
+                <button onclick="toggleNavbar()" id="open"><img src="./bars/photo_2024-07-21_03-30-56-removebg-preview.png" alt=""></button>
+            </div>
+            <div class="center">
+                <ul id="navbarList" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="text">
+                <h3 class="heder">Welcome to our club</h3>
+                <h1 class="exe">Vysh Burger🍕</h1>
+                <p class="paragrif">Once you taste it, you'll always be a part of us.<pr>🌭 watch all kind of fast food here.</p>
+                <div class="allimg">
+                    <div class="press" onclick="image1()">
+                        <img src="./img2/Frame 5.png" alt="Error" class="image">
+                    </div>
+                    <div class="press" onclick="image2()">
+                        <img src="./img2/Frame 6.png" alt="Error" class="image">
+                    </div>
+                    <div class="press" onclick="image3()">
+                        <img src="./img2/Frame 7.png" alt="Error" class="image">
+                    </div>
+                    <div class="press" onclick="image4()">
+                        <img src="./img2/Frame 8.png" alt="Error" class="image">
+                    </div>
+                </div>
+            </div>
+            <div class="picture" id="picture"></div>    
+        </div>
+        <!-- <div class="images"></div> -->
+    </div>
+     <div class="content">
+         <div class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+         <div class="testimonial">
+        <p>"The best burger I've ever had! 🍔"</p>
+        <h4>- John Doe</h4>
+        </div>
+         <div class="testimonial">
+         <p>"Amazing taste and great service! 🌟"</p>
+        <h4>- Jane Smith</h4>
+        </div>
+        <div class="testimonial">
+        <p>"I love the variety of fast food options. 🌭"</p>
+        <h4>- Mike Johnson</h4>
+         </div>
+         </div>
+        <div class="submit-review">
+         <h3>Leave Your Review</h3>
+        <form id="reviewForm">
+        <textarea id="reviewText" placeholder="Write your review here..."></textarea>
+        <input type="text" id="reviewerName" placeholder="Your name">
+        <button type="submit">Submit</button>
+         </form>
+         </div>
+        </div>
+         </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

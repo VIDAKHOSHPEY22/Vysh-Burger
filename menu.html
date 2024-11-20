@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00; /* Yellow color suitable for fast food */
+            direction: ltr; /* For left-to-right text */
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            padding: 10px;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .menu-item h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+        .menu-item p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .menu-item button {
+            background-color: #C70039; /* Red color suitable for fast food */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-item button:hover {
+            background-color: #900C3F;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+</div>
+
+<div class="menu">
+    <div class="menu-item">
+        <img src="./img3/pizza1.jpg" alt="Double Mushroom Pizza">
+        <h3>Double Mushroom Pizza</h3>
+        <p>Price: 555,000 Toman</p>
+        <button onclick="addToCart('Double Mushroom Pizza', './img3/pizza1.jpg', 555000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/pizza2.jpg" alt="Vegetable Pizza">
+        <h3>Vegetable Pizza</h3>
+        <p>Price: 455,000 Toman</p>
+        <button onclick="addToCart('Vegetable Pizza', './img3/pizza2.jpg', 455000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/pizza3.jpg" alt="Pepperoni Pizza">
+        <h3>Pepperoni Pizza</h3>
+        <p>Price: 655,000 Toman</p>
+        <button onclick="addToCart('Pepperoni Pizza', './img3/pizza3.jpg', 655000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/hamburger.jpg" alt="hamburger">
+        <h3>hamburger</h3>
+        <p>Price: 755,000 Toman</p>
+        <button onclick="addToCart('hamburger', './img3/hamburger.jpg', 755000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/sib.jpg" alt="french fries">
+        <h3>french fries</h3>
+        <p>Price: 355,000 Toman</p>
+        <button onclick="addToCart('french fries', './img3/sib.jpg', 355000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/tak.jpg" alt="hot dog">
+        <h3>hot dog</h3>
+        <p>Price: 455,000 Toman</p>
+        <button onclick="addToCart('hot dog', './img3/tak.jpg', 455000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/sambuse.jpg" alt="samosa">
+        <h3>samosa</h3>
+        <p>Price: 255,000 Toman</p>
+        <button onclick="addToCart('samosa', './img3/sambuse.jpg', 255000)">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="./img3/morgh.jpg" alt="chicken">
+        <h3>chicken</h3>
+        <p>Price: 955,000 Toman</p>
+        <button onclick="addToCart('chicken', './img3/morgh.jpg', 955000)">Add to Cart</button>
+    </div>
+
+</div>
+
+<script>
+    function addToCart(name, image, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const item = { name, image, price };
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Item added to cart!');
+    }
+</script>
+
+</body>
+</html>
