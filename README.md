@@ -39,5 +39,7 @@ This project is licensed under the MIT License.
 
 ---
 # Preview
-!preview(![alt text](https://github.com/VIDAKHOSHPEY22/Vysh-Burger/blob/main/Screenshot%202024-12-26%20211257.png))
+![alt text](https://github.com/VIDAKHOSHPEY22/Vysh-Burger/blob/main/Screenshot%202024-12-26%20211257.png)
+
+this is the live link https://vidakhoshpey22.github.io/Vysh-Burger/
 
