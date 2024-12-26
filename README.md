@@ -38,3 +38,4 @@ If you would like to contribute to this project, please fork the repository and 
 This project is licensed under the MIT License.
 
 ---
+!Preview("https://github.com/VIDAKHOSHPEY22/Vysh-Burger/blob/main/Screenshot%202024-12-26%20211257.png")
